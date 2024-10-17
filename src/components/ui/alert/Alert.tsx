@@ -25,7 +25,7 @@ const Alert: FC<Props> = ({ type, title, description, icon }) => {
           <X />
         </span>
       </div>
-      <p>{description}</p>
+      <div>{description}</div>
     </div>
   )
 }
