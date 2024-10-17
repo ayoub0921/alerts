@@ -1,0 +1,57 @@
+$errorBg: #fdeded;
+$errorColor: #5f2120;
+
+$infoBg: #e5f6fd;
+$infoColor: #1893d6;
+
+$successBg: #edf7ed;
+$successColor: #375b39;
+
+$warningBg: #FFF4E5;
+$warningColor: #663c00;
+
+
+
+@mixin alert($name, $bgColor, $color) {
+    .#{$name} {
+        background-color: $bgColor;
+        padding: 1rem;
+        border-radius: .5rem;
+        width: 80%;
+        color: $color;
+        margin: 10px auto;
+
+        .alert_header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .close_icon {
+                cursor: pointer;
+            }
+
+            .alert_title {
+                display: flex;
+                align-items: center;
+
+                h3 {
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        p {
+            margin-top: 1.2rem;
+            font-weight: 500;
+            line-height: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+    }
+}
+
+
+@include alert("alert_danger", $errorBg , $errorColor );
+@include alert("alert_info", $infoBg, $infoColor);
+@include alert("alert_success", $successBg, $successColor );
+@include alert("alert_warning", $warningBg, $warningColor )
