@@ -1,0 +1,1 @@
+export type AlertTypes = "alert_danger" | "alert_success" | "alert_warning" | "alert_info"

@@ -1,9 +1,10 @@
 import { X } from 'lucide-react';
 import './index.scss'
 import { FC, ReactNode } from 'react';
+import { AlertTypes } from '../../../types';
 
 type Props = {
-  type: string;
+  type: AlertTypes;
   title: string;
   description: ReactNode;
   icon: ReactNode
